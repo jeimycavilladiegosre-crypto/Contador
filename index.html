@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contador</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(ellipse at top, #1e3358 0%, #12233f 45%, #0b1830 100%);
+    }
+
+    .tarjeta {
+      width: 480px;
+      max-width: 92vw;
+      padding: 30px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .pantalla {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 160px;
+      margin-bottom: 24px;
+      border-radius: 20px;
+      background: #0d1428;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    #valor {
+      font-size: 80px;
+      font-weight: bold;
+      color: #22d3ee;
+      text-shadow: 0 0 18px rgba(34, 211, 238, 0.7);
+    }
+
+    .fila {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    button {
+      padding: 16px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: transform 0.1s, filter 0.2s;
+    }
+    button:hover  { filter: brightness(1.15); }
+    button:active { transform: scale(0.97); }
+
+    #restar { background: #334155; color: #fff; }
+    #sumar  { background: #22d3ee; color: #0b1830; }
+
+    #reiniciar {
+      width: 100%;
+      background: transparent;
+      color: #dbe4f3;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+  </style>
+</head>
+<body>
+  <div class="tarjeta">
+    <div class="pantalla">
+      <span id="valor">0</span>
+    </div>
+
+    <div class="fila">
+      <button id="restar">- restar</button>
+      <button id="sumar">+ sumar</button>
+    </div>
+
+    <button id="reiniciar">Reiniciar</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
